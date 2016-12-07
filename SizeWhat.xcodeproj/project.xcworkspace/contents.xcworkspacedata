@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SizeWhat.xcodeproj">
+      location = "self:/Users/domster83/Xcode/SizeWhat/SizeWhat.xcodeproj">
    </FileRef>
 </Workspace>

@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		73806B861DF898DF00D5520A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806B851DF898DF00D5520A /* AppDelegate.swift */; };
-		73806B881DF898DF00D5520A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806B871DF898DF00D5520A /* FirstViewController.swift */; };
-		73806B8A1DF898DF00D5520A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806B891DF898DF00D5520A /* SecondViewController.swift */; };
 		73806B8D1DF898DF00D5520A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73806B8B1DF898DF00D5520A /* Main.storyboard */; };
 		73806B8F1DF898DF00D5520A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73806B8E1DF898DF00D5520A /* Assets.xcassets */; };
 		73806B921DF898DF00D5520A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73806B901DF898DF00D5520A /* LaunchScreen.storyboard */; };
 		73806B9D1DF898DF00D5520A /* SizeWhatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806B9C1DF898DF00D5520A /* SizeWhatUITests.swift */; };
+		73806BA81DF89EBB00D5520A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BA71DF89EBB00D5520A /* Item.swift */; };
+		73806BA91DF89EE900D5520A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BA71DF89EBB00D5520A /* Item.swift */; };
+		73806BAE1DF8A5D400D5520A /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BAD1DF8A5D400D5520A /* ItemTableViewCell.swift */; };
+		73806BB21DF8A85800D5520A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BB11DF8A85800D5520A /* ViewController.swift */; };
+		73806BB61DF8B15100D5520A /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BB41DF8B15100D5520A /* ItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +32,18 @@
 /* Begin PBXFileReference section */
 		73806B821DF898DF00D5520A /* SizeWhat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizeWhat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73806B851DF898DF00D5520A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73806B871DF898DF00D5520A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		73806B891DF898DF00D5520A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		73806B8C1DF898DF00D5520A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73806B8E1DF898DF00D5520A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73806B911DF898DF00D5520A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		73806B931DF898DF00D5520A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73806B981DF898DF00D5520A /* SizeWhatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizeWhatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73806B931DF898DF00D5520A /* SizeWhatnfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SizeWhatnfo.plist; sourceTree = "<group>"; };
+		73806B981DF898DF00D5520A /* SizeWhatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizeWhatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73806B9C1DF898DF00D5520A /* SizeWhatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeWhatUITests.swift; sourceTree = "<group>"; };
-		73806B9E1DF898DF00D5520A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73806B9E1DF898DF00D5520A /* SizeWhatnfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SizeWhatnfo.plist; sourceTree = "<group>"; };
+		73806BA71DF89EBB00D5520A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		73806BAD1DF8A5D400D5520A /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		73806BB11DF8A85800D5520A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73806BB31DF8B15100D5520A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SizeWhatTests/Info.plist; sourceTree = "<group>"; };
+		73806BB41DF8B15100D5520A /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemTests.swift; path = SizeWhatTests/ItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				73806B841DF898DF00D5520A /* SizeWhat */,
+				73806BAC1DF8A11D00D5520A /* SizeWhatTests */,
 				73806B9B1DF898DF00D5520A /* SizeWhatUITests */,
 				73806B831DF898DF00D5520A /* Products */,
 			);
@@ -71,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				73806B821DF898DF00D5520A /* SizeWhat.app */,
-				73806B981DF898DF00D5520A /* SizeWhatUITests.xctest */,
+				73806B981DF898DF00D5520A /* SizeWhatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,12 +87,13 @@
 			isa = PBXGroup;
 			children = (
 				73806B851DF898DF00D5520A /* AppDelegate.swift */,
-				73806B871DF898DF00D5520A /* FirstViewController.swift */,
-				73806B891DF898DF00D5520A /* SecondViewController.swift */,
 				73806B8B1DF898DF00D5520A /* Main.storyboard */,
+				73806BB11DF8A85800D5520A /* ViewController.swift */,
+				73806BAD1DF8A5D400D5520A /* ItemTableViewCell.swift */,
+				73806BA71DF89EBB00D5520A /* Item.swift */,
 				73806B8E1DF898DF00D5520A /* Assets.xcassets */,
 				73806B901DF898DF00D5520A /* LaunchScreen.storyboard */,
-				73806B931DF898DF00D5520A /* Info.plist */,
+				73806B931DF898DF00D5520A /* SizeWhatnfo.plist */,
 			);
 			path = SizeWhat;
 			sourceTree = "<group>";
@@ -94,9 +102,18 @@
 			isa = PBXGroup;
 			children = (
 				73806B9C1DF898DF00D5520A /* SizeWhatUITests.swift */,
-				73806B9E1DF898DF00D5520A /* Info.plist */,
+				73806B9E1DF898DF00D5520A /* SizeWhatnfo.plist */,
 			);
 			path = SizeWhatUITests;
+			sourceTree = "<group>";
+		};
+		73806BAC1DF8A11D00D5520A /* SizeWhatTests */ = {
+			isa = PBXGroup;
+			children = (
+				73806BB31DF8B15100D5520A /* Info.plist */,
+				73806BB41DF8B15100D5520A /* ItemTests.swift */,
+			);
+			name = SizeWhatTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +136,9 @@
 			productReference = 73806B821DF898DF00D5520A /* SizeWhat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		73806B971DF898DF00D5520A /* SizeWhatUITests */ = {
+		73806B971DF898DF00D5520A /* SizeWhatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73806BA41DF898DF00D5520A /* Build configuration list for PBXNativeTarget "SizeWhatUITests" */;
+			buildConfigurationList = 73806BA41DF898DF00D5520A /* Build configuration list for PBXNativeTarget "SizeWhatTests" */;
 			buildPhases = (
 				73806B941DF898DF00D5520A /* Sources */,
 				73806B951DF898DF00D5520A /* Frameworks */,
@@ -132,9 +149,9 @@
 			dependencies = (
 				73806B9A1DF898DF00D5520A /* PBXTargetDependency */,
 			);
-			name = SizeWhatUITests;
+			name = SizeWhatTests;
 			productName = SizeWhatUITests;
-			productReference = 73806B981DF898DF00D5520A /* SizeWhatUITests.xctest */;
+			productReference = 73806B981DF898DF00D5520A /* SizeWhatTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +191,7 @@
 			projectRoot = "";
 			targets = (
 				73806B811DF898DE00D5520A /* SizeWhat */,
-				73806B971DF898DF00D5520A /* SizeWhatUITests */,
+				73806B971DF898DF00D5520A /* SizeWhatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,9 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73806B8A1DF898DF00D5520A /* SecondViewController.swift in Sources */,
+				73806BA81DF89EBB00D5520A /* Item.swift in Sources */,
+				73806BAE1DF8A5D400D5520A /* ItemTableViewCell.swift in Sources */,
+				73806BB21DF8A85800D5520A /* ViewController.swift in Sources */,
 				73806B861DF898DF00D5520A /* AppDelegate.swift in Sources */,
-				73806B881DF898DF00D5520A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73806BB61DF8B15100D5520A /* ItemTests.swift in Sources */,
+				73806BA91DF89EE900D5520A /* Item.swift in Sources */,
 				73806B9D1DF898DF00D5520A /* SizeWhatUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76MNG7EMV8;
-				INFOPLIST_FILE = SizeWhat/Info.plist;
+				INFOPLIST_FILE = SizeWhat/SizeWhatnfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dombarnes.SizeWhat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76MNG7EMV8;
-				INFOPLIST_FILE = SizeWhat/Info.plist;
+				INFOPLIST_FILE = SizeWhat/SizeWhatnfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dombarnes.SizeWhat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,7 +392,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 76MNG7EMV8;
-				INFOPLIST_FILE = SizeWhatUITests/Info.plist;
+				INFOPLIST_FILE = SizeWhatUITests/SizeWhatnfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dombarnes.SizeWhatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,7 +406,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 76MNG7EMV8;
-				INFOPLIST_FILE = SizeWhatUITests/Info.plist;
+				INFOPLIST_FILE = SizeWhatUITests/SizeWhatnfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dombarnes.SizeWhatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,7 +435,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		73806BA41DF898DF00D5520A /* Build configuration list for PBXNativeTarget "SizeWhatUITests" */ = {
+		73806BA41DF898DF00D5520A /* Build configuration list for PBXNativeTarget "SizeWhatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73806BA51DF898DF00D5520A /* Debug */,
