@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ItemViewController.swift
 //  SizeWhat
 //
 //  Created by Dominic Barnes on 07/12/2016.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   // MARK: Properties
-  @IBOutlet weak var itemNameLabel: UILabel!
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var descriptionTextField: UITextField!
   @IBOutlet weak var typeTextField: UITextField!
@@ -36,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   }
   
   func textFieldDidEndEditing(_ textField: UITextField) {
-    itemNameLabel.text = nameTextField.text
+  
   }
   
   // MARK: UIImagePickerControllerDelegate

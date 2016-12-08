@@ -9,29 +9,25 @@
 import UIKit
 
 class ItemTableViewController: UITableViewController {
-
     // MARK: Properties
+  
     var items = [Item]()
   
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+      loadSampleItems()
     }
 
     func loadSampleItems() {
       let photo1 = UIImage(named: "defaultPhoto")!
-      let item1 = Item(name: "Item 1", description: "", type: "", roomName: "Lounge", photo: photo1)!
-      let item2 = Item(name: "Item 2", description: "", type: "", roomName: "Kitchen", photo: photo1)
-      let item3 = Item(name: "Item 3", description: "", type: "", roomName: "Kitchen", photo: photo1)
+      let item1 = Item(name: "Item 1", description: "", type: "", roomName: "Lounge", photo: photo1, rating: 1)!
+      let item2 = Item(name: "Item 2", description: "", type: "", roomName: "Kitchen", photo: photo1, rating: 3)!
+      let item3 = Item(name: "Item 3", description: "", type: "", roomName: "Kitchen", photo: photo1, rating: 5)!
       
       items += [item1, item2, item3]
     }
-    
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,24 +36,26 @@ class ItemTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+      return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+      return items.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+      let cellIdentifier = "ItemTableViewCell"
+      let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemTableViewCell
+      
+      let item = items[indexPath.row]
+      
+      cell.nameLabel.text = item.name
+      cell.ratingControl.rating = item.rating
+      cell.photoImageView.image = item.photo
+      
+      return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

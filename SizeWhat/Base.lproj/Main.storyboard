@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Item Table View Controller-->
         <scene sceneID="hax-1k-Vax">
             <objects>
-                <tableViewController id="0TT-ic-Hkz" sceneMemberID="viewController">
+                <tableViewController id="0TT-ic-Hkz" customClass="ItemTableViewController" customModule="SizeWhat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="23T-zk-4q4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="adg-hO-F9U">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="adg-hO-F9U" userLabel="Photo Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -47,7 +47,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="rzr-ri-hrH" id="rQS-lr-m39"/>
-                                    <outlet property="photoImaheView" destination="adg-hO-F9U" id="4oA-jI-hRz"/>
+                                    <outlet property="photoImageView" destination="adg-hO-F9U" id="xz4-UH-atY"/>
                                     <outlet property="ratingControl" destination="Dei-L4-zCh" id="Gef-gv-1cm"/>
                                 </connections>
                             </tableViewCell>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="-802.39999999999998" y="-0.44977511244377816"/>
         </scene>
-        <!--View Controller-->
+        <!--Item View Controller-->
         <scene sceneID="x7I-3w-PLm">
             <objects>
-                <viewController id="Gy3-bw-nxj" customClass="ViewController" customModule="SizeWhat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gy3-bw-nxj" customClass="ItemViewController" customModule="SizeWhat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cYR-4E-F1H"/>
                         <viewControllerLayoutGuide type="bottom" id="mNB-ze-FhP"/>
@@ -75,40 +75,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t3b-zM-uMJ">
-                                <rect key="frame" x="20" y="30" width="343" height="577"/>
+                                <rect key="frame" x="20" y="30" width="343" height="544"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG8-fC-iZ6">
-                                        <rect key="frame" x="137.5" y="0.0" width="68.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name for item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-aL-haH" userLabel="Name">
-                                        <rect key="frame" x="0.0" y="32.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-tW-1J0" userLabel="Description">
-                                        <rect key="frame" x="0.0" y="74.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="42" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubr-B5-zUL" userLabel="Type">
-                                        <rect key="frame" x="0.0" y="116.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="84" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What room is it in?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-zG-qAU" userLabel="Room Name">
-                                        <rect key="frame" x="0.0" y="158.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="126" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-YQ-fQP">
-                                        <rect key="frame" x="11.5" y="200.5" width="320" height="320"/>
+                                        <rect key="frame" x="11.5" y="168" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gfy-YQ-fQP" secondAttribute="height" multiplier="1:1" id="1Nl-WZ-XVY"/>
@@ -118,7 +112,7 @@
                                         </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="tvp-AE-uZA" customClass="RatingControl" customModule="SizeWhat" customModuleProvider="target">
-                                        <rect key="frame" x="51.5" y="532.5" width="240" height="44"/>
+                                        <rect key="frame" x="51.5" y="500" width="240" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -142,7 +136,6 @@
                     </view>
                     <connections>
                         <outlet property="descriptionTextField" destination="eYO-tW-1J0" id="b8u-E6-2X7"/>
-                        <outlet property="itemNameLabel" destination="UG8-fC-iZ6" id="oil-PM-2LL"/>
                         <outlet property="nameTextField" destination="mUx-aL-haH" id="5GI-86-iZO"/>
                         <outlet property="photoImageView" destination="gfy-YQ-fQP" id="cpv-Ig-ZeT"/>
                         <outlet property="ratingControl" destination="tvp-AE-uZA" id="72B-rf-64Y"/>
