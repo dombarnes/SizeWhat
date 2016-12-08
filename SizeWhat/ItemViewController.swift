@@ -30,6 +30,16 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     super.viewDidLoad()
     // Handle the text field’s user input through delegate callbacks.
     nameTextField.delegate = self
+    
+    if let item = item {
+      navigationItem.title = item.name
+      nameTextField.text = item.name
+      descriptionTextField.text = item.description
+      typeTextField.text = item.type
+      roomNameTextField.text = item.roomName
+      photoImageView.image = item.photo
+      ratingControl.rating = item.rating
+    }
     checkValidItemName()
 
   }
@@ -81,7 +91,15 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
   }
   @IBAction func cancel(_ sender: UIBarButtonItem) {
-    dismiss(animated: true, completion: nil)
+    // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+    let isPresentingInAddItemMode = presentingViewController is UINavigationController
+    
+    if isPresentingInAddItemMode {
+      dismiss(animated: true, completion: nil)
+    }
+    else {
+      navigationController!.popViewController(animated: true)
+    }
   }
   
   // MARK: Actions
