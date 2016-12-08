@@ -34,7 +34,7 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     if let item = item {
       navigationItem.title = item.name
       nameTextField.text = item.name
-      descriptionTextField.text = item.description
+      descriptionTextField.text = item.descriptionInfo
       typeTextField.text = item.type
       roomNameTextField.text = item.roomName
       photoImageView.image = item.photo
@@ -81,13 +81,13 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if saveButton === sender as? UIBarButtonItem {
       let name = nameTextField.text ?? ""
-      let description = descriptionTextField.text ?? ""
+      let descriptionInfo = descriptionTextField.text ?? ""
       let type = typeTextField.text ?? ""
       let roomName = roomNameTextField.text ?? ""
       let photo = photoImageView.image
       let rating = ratingControl.rating
       
-      item = Item(name: name, description: description, type: type, roomName: roomName, photo: photo, rating: rating)
+      item = Item(name: name, descriptionInfo: descriptionInfo, type: type, roomName: roomName, photo: photo, rating: rating)
     }
   }
   @IBAction func cancel(_ sender: UIBarButtonItem) {
