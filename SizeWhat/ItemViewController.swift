@@ -17,13 +17,20 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
   @IBOutlet weak var roomNameTextField: UITextField!
   @IBOutlet weak var photoImageView: UIImageView!
   @IBOutlet weak var ratingControl: RatingControl!
-
+  @IBOutlet weak var saveButton: UIBarButtonItem!
+  
+  
+  /*
+   This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
+   or constructed as part of adding a new meal.
+   */
+  var item: Item?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     // Handle the text field’s user input through delegate callbacks.
     nameTextField.delegate = self
+    checkValidItemName()
 
   }
   
@@ -33,9 +40,17 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     textField.resignFirstResponder()
     return true
   }
-  
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    saveButton.isEnabled = false
+  }
+  func checkValidItemName() {
+    // Disable the Save button if the text field is empty.
+    let text = nameTextField.text ?? ""
+    saveButton.isEnabled = !text.isEmpty
+  }
   func textFieldDidEndEditing(_ textField: UITextField) {
-  
+    checkValidItemName()
+    navigationItem.title = textField.text
   }
   
   // MARK: UIImagePickerControllerDelegate
@@ -51,21 +66,37 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     dismiss(animated: true, completion: nil)
   }
   
-  // MARK: Actions
+  // MARK: Navigation
+  // This method lets you configure a view controller before it's presented.
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if saveButton === sender as? UIBarButtonItem {
+      let name = nameTextField.text ?? ""
+      let description = descriptionTextField.text ?? ""
+      let type = typeTextField.text ?? ""
+      let roomName = roomNameTextField.text ?? ""
+      let photo = photoImageView.image
+      let rating = ratingControl.rating
+      
+      item = Item(name: name, description: description, type: type, roomName: roomName, photo: photo, rating: rating)
+    }
+  }
+  @IBAction func cancel(_ sender: UIBarButtonItem) {
+    dismiss(animated: true, completion: nil)
+  }
   
+  // MARK: Actions
   @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
     // Hide the keyboard.
     nameTextField.resignFirstResponder()
     // UIImagePickerController is a view controller that lets a user pick media from their photo library.
     let imagePickerController = UIImagePickerController()
-//    imagePickerController.modalPresentationStyle = .popover
+    // imagePickerController.modalPresentationStyle = .popover
     // Only allow photos to be picked, not taken.
     imagePickerController.sourceType = .photoLibrary
     // Make sure ViewController is notified when the user picks an image.
     imagePickerController.delegate = self
     present(imagePickerController, animated: true, completion: nil)
-//    imagePickerController.popoverPresentationController?.barButtonItem
+    //  imagePickerController.popoverPresentationController?.barButtonItem
   }
-
 
 }
