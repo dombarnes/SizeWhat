@@ -16,7 +16,8 @@
 		73806BA91DF89EE900D5520A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BA71DF89EBB00D5520A /* Item.swift */; };
 		73806BAE1DF8A5D400D5520A /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BAD1DF8A5D400D5520A /* ItemTableViewCell.swift */; };
 		73806BB21DF8A85800D5520A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BB11DF8A85800D5520A /* ViewController.swift */; };
-		73806BB61DF8B15100D5520A /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BB41DF8B15100D5520A /* ItemTests.swift */; };
+		73806BB91DF96BB800D5520A /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BB71DF96BB100D5520A /* RatingControl.swift */; };
+		73806BBB1DF99F7300D5520A /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73806BBA1DF99F7300D5520A /* ItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		73806BB11DF8A85800D5520A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73806BB31DF8B15100D5520A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SizeWhatTests/Info.plist; sourceTree = "<group>"; };
 		73806BB41DF8B15100D5520A /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemTests.swift; path = SizeWhatTests/ItemTests.swift; sourceTree = "<group>"; };
+		73806BB71DF96BB100D5520A /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		73806BBA1DF99F7300D5520A /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				73806B851DF898DF00D5520A /* AppDelegate.swift */,
 				73806B8B1DF898DF00D5520A /* Main.storyboard */,
+				73806BBA1DF99F7300D5520A /* ItemTableViewController.swift */,
+				73806BB71DF96BB100D5520A /* RatingControl.swift */,
 				73806BB11DF8A85800D5520A /* ViewController.swift */,
 				73806BAD1DF8A5D400D5520A /* ItemTableViewCell.swift */,
 				73806BA71DF89EBB00D5520A /* Item.swift */,
@@ -167,11 +172,13 @@
 					73806B811DF898DE00D5520A = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 76MNG7EMV8;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					73806B971DF898DF00D5520A = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 76MNG7EMV8;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 73806B811DF898DE00D5520A;
 					};
@@ -224,6 +231,8 @@
 				73806BA81DF89EBB00D5520A /* Item.swift in Sources */,
 				73806BAE1DF8A5D400D5520A /* ItemTableViewCell.swift in Sources */,
 				73806BB21DF8A85800D5520A /* ViewController.swift in Sources */,
+				73806BB91DF96BB800D5520A /* RatingControl.swift in Sources */,
+				73806BBB1DF99F7300D5520A /* ItemTableViewController.swift in Sources */,
 				73806B861DF898DF00D5520A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73806BB61DF8B15100D5520A /* ItemTests.swift in Sources */,
 				73806BA91DF89EE900D5520A /* Item.swift in Sources */,
 				73806B9D1DF898DF00D5520A /* SizeWhatUITests.swift in Sources */,
 			);
@@ -434,6 +442,7 @@
 				73806BA31DF898DF00D5520A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73806BA41DF898DF00D5520A /* Build configuration list for PBXNativeTarget "SizeWhatTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +451,7 @@
 				73806BA61DF898DF00D5520A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

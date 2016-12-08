@@ -14,14 +14,16 @@ class Item {
   var description: String
   var type: String
   var roomName: String
+  var photo: UIImage
   
   // MARK: Initialization
   
-  init?(name: String, description: String, type: String, roomName: String) {
+  init?(name: String, description: String, type: String, roomName: String, photo: UIImage?) {
     self.name = name
     self.description = description
     self.type = type
     self.roomName = roomName
+    self.photo = photo!
     
     if name.isEmpty {
       return nil

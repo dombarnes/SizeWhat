@@ -3,7 +3,7 @@
 //  SizeWhat
 //
 //  Created by Dominic Barnes on 07/12/2016.
-//  Copyright © 2016 Trilby Multimedia Limited. All rights reserved.
+//  Copyright © 2016 Dominic Barnes. All rights reserved.
 //
 
 import UIKit
@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   @IBOutlet weak var typeTextField: UITextField!
   @IBOutlet weak var roomNameTextField: UITextField!
   @IBOutlet weak var photoImageView: UIImageView!
+  @IBOutlet weak var ratingControl: RatingControl!
 
   
   override func viewDidLoad() {
@@ -43,7 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // Dismiss the picker if the user canceled.
     dismiss(animated: true, completion: nil)
   }
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     // The info dictionary contains multiple representations of the image, and this uses the original.
     let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
     photoImageView.image = selectedImage
@@ -52,19 +53,19 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   }
   
   // MARK: Actions
-  @IBAction func saveButton(_ sender: UIButton) {
-    itemNameLabel.text = "Default Text"
-  }
+  
   @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
     // Hide the keyboard.
     nameTextField.resignFirstResponder()
     // UIImagePickerController is a view controller that lets a user pick media from their photo library.
     let imagePickerController = UIImagePickerController()
+//    imagePickerController.modalPresentationStyle = .popover
     // Only allow photos to be picked, not taken.
     imagePickerController.sourceType = .photoLibrary
     // Make sure ViewController is notified when the user picks an image.
     imagePickerController.delegate = self
     present(imagePickerController, animated: true, completion: nil)
+//    imagePickerController.popoverPresentationController?.barButtonItem
   }
 
 
