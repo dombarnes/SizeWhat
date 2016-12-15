@@ -1,0 +1,21 @@
+
+/* Class = "UINavigationItem"; title = "New Item"; ObjectID = "J9d-Jk-ekH"; */
+"J9d-Jk-ekH.title" = "New Item";
+
+/* Class = "UITextField"; placeholder = "Item type"; ObjectID = "Ubr-B5-zUL"; */
+"Ubr-B5-zUL.placeholder" = "Item type";
+
+/* Class = "UITextField"; placeholder = "Enter description"; ObjectID = "eYO-tW-1J0"; */
+"eYO-tW-1J0.placeholder" = "Enter description";
+
+/* Class = "UITextField"; placeholder = "Enter name for item"; ObjectID = "mUx-aL-haH"; */
+"mUx-aL-haH.placeholder" = "Enter name for item";
+
+/* Class = "UITextField"; placeholder = "What room is it in?"; ObjectID = "oNZ-zG-qAU"; */
+"oNZ-zG-qAU.placeholder" = "What room is it in?";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rzr-ri-hrH"; */
+"rzr-ri-hrH.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Your Items"; ObjectID = "tV4-c8-Pzh"; */
+"tV4-c8-Pzh.title" = "Your Items";

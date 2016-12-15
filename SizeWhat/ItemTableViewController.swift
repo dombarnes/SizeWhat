@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class ItemTableViewController: UITableViewController {
   // MARK: Properties
@@ -103,24 +104,42 @@ class ItemTableViewController: UITableViewController {
   // MARK: - Navigation
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "ShowDetail" {
-      let itemDetailViewController = segue.destination as! ItemViewController
+    
+    super.prepare(for: segue, sender: sender)
+
+    switch(segue.identifier ?? "") {
+
+    case "AddItem":
+      os_log("Adding a new meal.", log: OSLog.default, type: .debug)
       
-      if let selectedItemCell = sender as? ItemTableViewCell {
-        let indexPath = tableView.indexPath(for: selectedItemCell)!
-        let selectedItem = items[indexPath.row]
-        itemDetailViewController.item = selectedItem
+    case "ShowDetail":
+      guard let itemDetailViewController = segue.destination as? ItemViewController else {
+        fatalError("Unexpected destination: \(segue.destination)")
       }
-    }
-    else if segue.identifier == "AddItem" {
-      print("Adding new item 💡.")
+      
+      guard let selectedItemCell = sender as? ItemTableViewCell else {
+        fatalError("Unexpected sender: \(sender)")
+      }
+      
+      guard let indexPath = tableView.indexPath(for: selectedItemCell) else {
+        fatalError("The selected cell is not being displayed by the table")
+      }
+      
+      let selectedItem = items[indexPath.row]
+      itemDetailViewController.item = selectedItem
+      
+    default:
+      fatalError("Unexpected Segue Identifier; \(segue.identifier)")
     }
   }
- 
+  
+  //MARK: Actions
 
   @IBAction func unwindToItemList(sender: UIStoryboardSegue){
     if let sourceViewController = sender.source as? ItemViewController, let item = sourceViewController.item {
+      
       if let selectedIndexPath = tableView.indexPathForSelectedRow{
+        // Update existing item
         items[selectedIndexPath.row] = item
         tableView.reloadRows(at: [selectedIndexPath], with: .none)
       }
@@ -137,10 +156,14 @@ class ItemTableViewController: UITableViewController {
   // MARK: NSCoding
   func saveItems() {
     let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(items, toFile: Item.ArchiveURL.path)
-    if !isSuccessfulSave {
-      print("Failed to save item")
+    if isSuccessfulSave {
+      os_log("Items successfully saved.", log: OSLog.default, type: .debug)
+    }
+    else {
+      os_log("Failed to save items...", log: OSLog.default, type: .error)
     }
   }
+  
   func loadItems() -> [Item]? {
     return NSKeyedUnarchiver.unarchiveObject(withFile: Item.ArchiveURL.path) as? [Item]
   }
