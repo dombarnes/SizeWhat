@@ -19,8 +19,8 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
   @IBOutlet weak var photoImageView: UIImageView!
   @IBOutlet weak var ratingControl: RatingControl!
   @IBOutlet weak var saveButton: UIBarButtonItem!
-  
-  
+  @IBOutlet weak var stackView: UIStackView!
+  @IBOutlet weak var scrollView: UIScrollView!
   /*
    This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
    or constructed as part of adding a new meal.
@@ -34,6 +34,12 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     descriptionTextField.delegate = self
     typeTextField.delegate = self
     roomNameTextField.delegate = self
+    
+//    stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+//    stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+//    stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+//    stackView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+//    stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
     
     if let item = item {
       navigationItem.title = item.name

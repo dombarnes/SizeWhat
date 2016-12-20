@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UPI-mN-F9X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UPI-mN-F9X">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dnJ-Nh-foF" id="7Cx-GT-AYB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="adg-hO-F9U" userLabel="Photo Image View">
@@ -87,77 +87,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5he-NF-BFw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5he-NF-BFw">
+                                <rect key="frame" x="20" y="0.0" width="374" height="716"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t3b-zM-uMJ">
-                                        <rect key="frame" x="8" y="28" width="220" height="450"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t3b-zM-uMJ">
+                                        <rect key="frame" x="0.0" y="8" width="374" height="634"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name for item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-aL-haH" userLabel="Name">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-tW-1J0" userLabel="Description">
-                                                <rect key="frame" x="0.0" y="42" width="220" height="30"/>
+                                                <rect key="frame" x="0.0" y="42" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubr-B5-zUL" userLabel="Type">
-                                                <rect key="frame" x="0.0" y="84" width="220" height="30"/>
+                                                <rect key="frame" x="0.0" y="84" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What room is it in?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-zG-qAU" userLabel="Room Name">
-                                                <rect key="frame" x="0.0" y="126" width="220" height="30"/>
+                                                <rect key="frame" x="0.0" y="126" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                             </textField>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-YQ-fQP">
-                                                <rect key="frame" x="0.0" y="168.00000000000003" width="220" height="219.66666666666671"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What room is it in?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-tB-iSM" userLabel="Room Name">
+                                                <rect key="frame" x="0.0" y="168" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What room is it in?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-TC-ydG" userLabel="Room Name">
+                                                <rect key="frame" x="0.0" y="210" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-YQ-fQP">
+                                                <rect key="frame" x="27" y="252" width="320" height="320"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="gfy-YQ-fQP" secondAttribute="height" multiplier="1:1" id="1Nl-WZ-XVY"/>
+                                                    <constraint firstAttribute="width" secondItem="gfy-YQ-fQP" secondAttribute="height" multiplier="1:1" id="MGW-7X-r0E"/>
                                                 </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="hCB-bD-Emf" appends="YES" id="bAo-mc-Bz7"/>
                                                 </connections>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-qb-hR8" customClass="RatingControl" customModule="SizeWhat" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="399.66666666666669" width="220" height="50"/>
+                                                <rect key="frame" x="77" y="584" width="220" height="50"/>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="oNZ-zG-qAU" firstAttribute="leading" secondItem="t3b-zM-uMJ" secondAttribute="leadingMargin" id="3a6-5m-UmC"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="oNZ-zG-qAU" secondAttribute="trailing" id="Nd6-xK-a9Z"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="eYO-tW-1J0" secondAttribute="trailing" id="ONZ-5E-2CO"/>
-                                            <constraint firstItem="eYO-tW-1J0" firstAttribute="leading" secondItem="t3b-zM-uMJ" secondAttribute="leadingMargin" id="Rjm-wf-pWa"/>
-                                            <constraint firstItem="mUx-aL-haH" firstAttribute="trailing" secondItem="t3b-zM-uMJ" secondAttribute="trailingMargin" id="X1z-YF-o5E"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ubr-B5-zUL" secondAttribute="trailing" id="dmW-jP-e0G"/>
-                                            <constraint firstItem="Ubr-B5-zUL" firstAttribute="leading" secondItem="t3b-zM-uMJ" secondAttribute="leading" id="n8J-ZX-PCv"/>
-                                            <constraint firstItem="mUx-aL-haH" firstAttribute="leading" secondItem="t3b-zM-uMJ" secondAttribute="leadingMargin" id="nYM-ot-pqa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ubr-B5-zUL" secondAttribute="trailing" id="6OK-Vz-F5l"/>
+                                            <constraint firstAttribute="trailing" secondItem="eYO-tW-1J0" secondAttribute="trailing" id="9fQ-TR-gGB"/>
+                                            <constraint firstAttribute="trailing" secondItem="oNZ-zG-qAU" secondAttribute="trailing" id="GyF-t9-aUH"/>
+                                            <constraint firstAttribute="trailing" secondItem="dj6-TC-ydG" secondAttribute="trailing" id="cIb-SO-PXj"/>
+                                            <constraint firstAttribute="trailing" secondItem="mUx-aL-haH" secondAttribute="trailing" id="khv-nE-yfO"/>
+                                            <constraint firstAttribute="trailing" secondItem="R1K-tB-iSM" secondAttribute="trailing" id="oB6-nZ-i7x"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="trailing" secondItem="5he-NF-BFw" secondAttribute="trailing" id="3wT-vE-ktE"/>
-                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="leading" secondItem="5he-NF-BFw" secondAttribute="leading" id="gpa-eI-bRn"/>
-                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="bottom" secondItem="5he-NF-BFw" secondAttribute="bottom" id="guG-IO-sqh"/>
-                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="top" secondItem="5he-NF-BFw" secondAttribute="top" id="lCq-3b-1e5"/>
+                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="width" secondItem="5he-NF-BFw" secondAttribute="width" id="5R8-3w-0Vt"/>
+                                    <constraint firstAttribute="bottom" secondItem="t3b-zM-uMJ" secondAttribute="bottom" id="Ksf-QR-Adn"/>
+                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="leading" secondItem="5he-NF-BFw" secondAttribute="leading" id="PKQ-Yw-XxP"/>
+                                    <constraint firstItem="t3b-zM-uMJ" firstAttribute="top" secondItem="5he-NF-BFw" secondAttribute="top" constant="8" id="fY1-fQ-Svu"/>
+                                    <constraint firstAttribute="trailing" secondItem="t3b-zM-uMJ" secondAttribute="trailing" id="rfd-1B-die"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="5he-NF-BFw" firstAttribute="leading" secondItem="Orr-Zg-izA" secondAttribute="leadingMargin" id="6gc-p5-e9d"/>
+                            <constraint firstItem="5he-NF-BFw" firstAttribute="leading" secondItem="Orr-Zg-izA" secondAttribute="leadingMargin" id="3eJ-Ms-52A"/>
                             <constraint firstItem="5he-NF-BFw" firstAttribute="trailing" secondItem="Orr-Zg-izA" secondAttribute="trailingMargin" id="Lvw-lG-dVJ"/>
                             <constraint firstItem="mNB-ze-FhP" firstAttribute="top" secondItem="5he-NF-BFw" secondAttribute="bottom" constant="20" id="UuF-7H-031"/>
-                            <constraint firstItem="5he-NF-BFw" firstAttribute="top" secondItem="Orr-Zg-izA" secondAttribute="topMargin" constant="20" id="o2L-eL-nV7"/>
+                            <constraint firstItem="5he-NF-BFw" firstAttribute="top" secondItem="Orr-Zg-izA" secondAttribute="topMargin" id="o2L-eL-nV7"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="h0F-Ro-QjB" appends="YES" id="BB4-v6-2Xp"/>
@@ -182,6 +193,8 @@
                         <outlet property="ratingControl" destination="5ca-qb-hR8" id="DGX-GZ-3gk"/>
                         <outlet property="roomNameTextField" destination="oNZ-zG-qAU" id="Ecb-zQ-khq"/>
                         <outlet property="saveButton" destination="NGy-tj-42w" id="Sal-L2-NiU"/>
+                        <outlet property="scrollView" destination="5he-NF-BFw" id="PAm-wg-foX"/>
+                        <outlet property="stackView" destination="t3b-zM-uMJ" id="Vdc-II-0pt"/>
                         <outlet property="typeTextField" destination="Ubr-B5-zUL" id="6Up-oG-fOT"/>
                     </connections>
                 </viewController>
@@ -194,7 +207,7 @@
                 </tapGestureRecognizer>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="h0F-Ro-QjB"/>
             </objects>
-            <point key="canvasLocation" x="1705.7971014492755" y="0.0"/>
+            <point key="canvasLocation" x="1704.8" y="-0.44977511244377816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LdQ-rx-uow">
