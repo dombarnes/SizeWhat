@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="SizeWhat/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.2" build-num="8C38"/>
+    </header>
+    <body/>
+  </file>
+  <file original="SizeWhat/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.2" build-num="8C38"/>
+    </header>
+    <body>
+      <trans-unit id="J9d-Jk-ekH.title">
+        <source>New Item</source>
+        <note>Class = "UINavigationItem"; title = "New Item"; ObjectID = "J9d-Jk-ekH";</note>
+      </trans-unit>
+      <trans-unit id="Ubr-B5-zUL.placeholder">
+        <source>Item type</source>
+        <note>Class = "UITextField"; placeholder = "Item type"; ObjectID = "Ubr-B5-zUL";</note>
+      </trans-unit>
+      <trans-unit id="eYO-tW-1J0.placeholder">
+        <source>Enter description</source>
+        <note>Class = "UITextField"; placeholder = "Enter description"; ObjectID = "eYO-tW-1J0";</note>
+      </trans-unit>
+      <trans-unit id="mUx-aL-haH.placeholder">
+        <source>Enter name for item</source>
+        <note>Class = "UITextField"; placeholder = "Enter name for item"; ObjectID = "mUx-aL-haH";</note>
+      </trans-unit>
+      <trans-unit id="oNZ-zG-qAU.placeholder">
+        <source>What room is it in?</source>
+        <note>Class = "UITextField"; placeholder = "What room is it in?"; ObjectID = "oNZ-zG-qAU";</note>
+      </trans-unit>
+      <trans-unit id="rzr-ri-hrH.text">
+        <source>Label</source>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "rzr-ri-hrH";</note>
+      </trans-unit>
+      <trans-unit id="tV4-c8-Pzh.title">
+        <source>Your Items</source>
+        <note>Class = "UINavigationItem"; title = "Your Items"; ObjectID = "tV4-c8-Pzh";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SizeWhat/SizeWhatnfo.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.2" build-num="8C38"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SizeWhatUITests/SizeWhatnfo.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.2" build-num="8C38"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
