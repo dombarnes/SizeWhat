@@ -64,12 +64,6 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     // Enable the Save button only if the text field has a valid Meal name.
     updateSaveButtonState()
 
-    
-    // Add edge swipe for back action
-    let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
-    edgePan.edges = .left
-    view.addGestureRecognizer(edgePan)
-
   }
   
   // MARK: UITextFieldDelegate
@@ -94,6 +88,7 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     updateSaveButtonState()
     navigationItem.title = textField.text
   }
+  
   
   // MARK: UIImagePickerControllerDelegate
   
@@ -152,7 +147,14 @@ class ItemViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
   }
   
-  func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+  // Add edge swipe for back action
+  @objc func setupEdgeSwipe() {
+    let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action:#selector(screenEdgeSwiped) )
+    edgePan.edges = .left
+    view.addGestureRecognizer(edgePan)
+  }
+  
+  @objc func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
     if recognizer.state == .recognized {
       let isPresentingInAddItemMode = presentingViewController is UINavigationController
       

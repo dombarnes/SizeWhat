@@ -118,7 +118,7 @@ class ItemTableViewController: UITableViewController {
       }
       
       guard let selectedItemCell = sender as? ItemTableViewCell else {
-        fatalError("Unexpected sender: \(sender)")
+        fatalError("Unexpected sender: \(String(describing: sender))")
       }
       
       guard let indexPath = tableView.indexPath(for: selectedItemCell) else {
@@ -129,7 +129,7 @@ class ItemTableViewController: UITableViewController {
       itemDetailViewController.item = selectedItem
       
     default:
-      fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+      fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
     }
   }
   
